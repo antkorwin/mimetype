@@ -1,6 +1,6 @@
 :sectnums:
 
-= Get MimeType for file in Java
+= Get MimeType of the file in Java
 
 image:https://github.com/antkorwin/mimetype/workflows/Build/badge.svg["Build Status"]
 
