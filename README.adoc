@@ -1,0 +1,52 @@
+:sectnums:
+
+= Get MimeType for file in Java
+
+This is a collection of simple classes which retrieve meta-data from the file content.
+
+== Getting started
+
+Just add the following dependency in your pom.xml file:
+
+[source,xml]
+----
+<dependency>
+    <groupId>com.antkorwin</groupId>
+    <artifactId>mimetype</artifactId>
+    <version>0.1</version>
+</dependency>
+----
+
+== How to get mime-type of file in java
+
+[source,java]
+----
+File file = new File("document.pdf");
+String type = new MimeTypeResolver().get(file);
+System.out.println(type);
+----
+
+this code prints : `application/pdf`
+
+== How to get SHA-256 of file content in Java
+
+[source,java]
+----
+File file = new File("document.pdf");
+String sha256 = new Sha256Resolver().get(file);
+System.out.println(sha256);
+----
+
+this code prints the SHA-256 of the `document.pdf` file :
+`bbf9546ec49f2bfe384a91cb5a33831c67a69fb8a7197346f261df0aa8f7a048`
+
+
+== How to extract text of the Word\Excel\Pdf document in Java
+
+[source, java]
+----
+File file = new ResourceFile("word.docx").getFile();
+String text = new FileTextResolver().get(file);
+assertThat(text).containsSubsequence("This is the content of word file...");
+----
+
