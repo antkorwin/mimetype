@@ -2,6 +2,8 @@
 
 = Get MimeType for file in Java
 
+image:https://github.com/antkorwin/mimetype/workflows/Build/badge.svg["Build Status"]
+
 This is a collection of simple classes which retrieve meta-data from the file content.
 
 == Getting started
