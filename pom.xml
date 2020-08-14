@@ -5,7 +5,7 @@
 
     <groupId>com.antkorwin</groupId>
     <artifactId>mimetype</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
     <packaging>jar</packaging>
 
     <name>MimeType Resolver</name>
@@ -40,7 +40,7 @@
         <throwable-functions.version>1.2</throwable-functions.version>
         <org.apache.tika.version>1.24.1</org.apache.tika.version>
         <commons-codec.version>1.14</commons-codec.version>
-        <ioutils.version>0.2</ioutils.version>
+        <ioutils.version>0.3</ioutils.version>
     </properties>
 
     <developers>

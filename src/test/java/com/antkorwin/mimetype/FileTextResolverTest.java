@@ -46,4 +46,28 @@ class FileTextResolverTest {
 		                                     "Token1", "Token2", "Token3",
 		                                     "This is the end of documents.");
 	}
+
+	@Test
+	void extractFromByteArray() {
+		// Arrange
+		byte[] bytes = new ResourceFile("word.docx").readAsByteArray();
+		// Act
+		String text = new FileTextResolver().get(bytes);
+		// Assert
+		assertThat(text).containsSubsequence("Тестовый документ",
+		                                     "Много", "пробелов", "между", "словами", "вот",
+		                                     "Token1", "Token2", "Token3",
+		                                     "This is the end of documents.");
+	}
+
+	@Test
+	void extractFromInputStream() {
+		// Act
+		String text = new FileTextResolver().get(() -> new ResourceFile("word.docx").getInputStream());
+		// Assert
+		assertThat(text).containsSubsequence("Тестовый документ",
+		                                     "Много", "пробелов", "между", "словами", "вот",
+		                                     "Token1", "Token2", "Token3",
+		                                     "This is the end of documents.");
+	}
 }
